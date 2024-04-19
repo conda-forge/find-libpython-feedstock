@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools >=42
+    - python >=3.7
+    - setuptools >=43
     - setuptools-scm
   run:
-    - python >=3.6
+    - python >=3.7
 
 test:
   source_files:

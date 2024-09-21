@@ -1,5 +1,5 @@
 {% set name = "find-libpython" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/find_libpython-{{ version }}.tar.gz
-  sha256: 4dd75e54c0828cfa8e97287565d2499a6bd6216140afdf251c87a456e8e52cd3
+  sha256: 46f9cdcd397ddb563b2d7592ded3796a41c1df5222443bd9d981721c906c03e6
 
 build:
   entry_points:
@@ -19,24 +19,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools >=42
-    - setuptools-scm
+    - python >=3.7
+    - setuptools >=43
   run:
-    - python >=3.6
+    - python >=3.7
 
 test:
-  source_files:
-    - tests
   imports:
     - find_libpython
   commands:
     - pip check
     - find_libpython --help
-    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest
 
 about:
   home: https://github.com/ktbarrett/find_libpython

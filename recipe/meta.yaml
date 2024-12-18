@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/find_libpython-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/find_libpython-{{ version }}.tar.gz
   sha256: 46f9cdcd397ddb563b2d7592ded3796a41c1df5222443bd9d981721c906c03e6
 
 build:
@@ -14,15 +14,15 @@ build:
     - find_libpython = find_libpython:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=43
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - find_libpython --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ktbarrett/find_libpython

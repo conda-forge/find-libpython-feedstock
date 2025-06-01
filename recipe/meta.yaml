@@ -1,5 +1,5 @@
 {% set name = "find-libpython" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/find_libpython-{{ version }}.tar.gz
-  sha256: 46f9cdcd397ddb563b2d7592ded3796a41c1df5222443bd9d981721c906c03e6
+  sha256: 7e6edbbaaa8648c8c7c13c54b127653c83cfb01a853db7e5b1ee2e97c10b2353
 
 build:
   entry_points:
     - find_libpython = find_libpython:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:

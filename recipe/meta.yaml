@@ -1,5 +1,5 @@
 {% set name = "find-libpython" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/find_libpython-{{ version }}.tar.gz
-  sha256: 7e6edbbaaa8648c8c7c13c54b127653c83cfb01a853db7e5b1ee2e97c10b2353
+  sha256: 4e4e0ffcad3bfaf2af9461b359329b8736e3f721dc375da7c167aff383e56be1
 
 build:
   entry_points:

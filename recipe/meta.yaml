@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=43
+    - setuptools >=61.2
   run:
     - python >={{ python_min }}
 

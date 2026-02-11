@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: find-libpython
-  version: 0.5.0
+  version: "0.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/find_libpython-${{ version }}.tar.gz
-  sha256: 4e4e0ffcad3bfaf2af9461b359329b8736e3f721dc375da7c167aff383e56be1
+  sha256: 12a0fb39ff8dcc64ad0fd554b1bd142ea4a8c4c18e5da6043a547ce7b25559fe
 
 build:
   number: 0
